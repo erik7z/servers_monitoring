@@ -1,5 +1,5 @@
 #!/bin/bash
-export $(grep -v '^#' .env | xargs)
+export $(grep -v '^#' "`dirname $0`/.env" | xargs)
 
 mapfile -t SERVERS_ARRAY < $SERVERS_LIST;
 
